@@ -149,6 +149,7 @@ form {
 
 .image {
     margin: 20px 0;
+    width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
