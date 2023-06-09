@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.square {
+    border: 3px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    width: 1000px;
+}
+
+.square h1 {
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ccc;
+}
+
+.quest {
+    padding: 20px 0;
+    font-size: 25px;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit {
+    padding: 8px 16px;
+    margin-right: 5px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.red {
+    background-color: #bd5959;
+}
+
+.cyan {
+    background-color: #229dcd;
+}
+
+.not {
+    background-color: #df138a;
+}
+
+.submit:hover {
+    opacity: 0.8;
+}
+
+.check {
+    color: #ff9500;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.next-prev {
+    margin-top: 10px;
+}
+
+.image {
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .square {
+        width: 95%;
+    }
+}
