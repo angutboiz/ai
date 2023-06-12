@@ -653,7 +653,7 @@ var socaudung = 0
 var currentIndex = 0
 var arrSavecurrentIndex = []
 btn.addEventListener("click", function () {
-    CheckAnswer()
+    CheckAnswer1()
 })
 
 next.addEventListener("click", function () {
@@ -687,7 +687,7 @@ window.addEventListener("submit", function (e) {
     e.preventDefault()
 })
 
-function CheckAnswer() {
+function CheckAnswer1() {
     var checkedInput = document.querySelector("input[name='radio']:checked")
 
     if (checkedInput) {
@@ -696,10 +696,24 @@ function CheckAnswer() {
         if (selectedAnswer == questionList[currentIndex].answer[questionList[currentIndex].correctAns]) {
             checkText.classList.remove("hide")
             checkText.innerHTML = "Chính xác"
-            socaudung++
         } else {
             checkText.classList.remove("hide")
             checkText.innerHTML = "Sai rồi"
+        }
+    }
+}
+
+function CheckAnswer() {
+    var checkedInput = document.querySelector("input[name='radio']:checked")
+
+    if (checkedInput) {
+        var selectedAnswer = checkedInput.parentNode.querySelector(".answer").textContent
+        console.log(checkedInput)
+        if (selectedAnswer == questionList[currentIndex].answer[questionList[currentIndex].correctAns]) {
+            checkText.classList.remove("hide")
+            socaudung++
+        } else {
+            checkText.classList.remove("hide")
         }
     }
 }
