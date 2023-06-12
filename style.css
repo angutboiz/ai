@@ -93,11 +93,6 @@ form {
     width: 1000px;
 }
 
-.square h1 {
-    padding-bottom: 20px;
-    border-bottom: 3px solid #ccc;
-}
-
 .quest {
     padding: 20px 0;
     font-size: 25px;
@@ -174,4 +169,17 @@ button a {
     font-size: 18px;
     text-decoration: none;
     color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ccc;
+}
+
+.aaaa {
+    color: #ff9500;
+    margin-right: 40px;
 }

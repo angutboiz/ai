@@ -648,6 +648,8 @@ var next = document.querySelector("#next")
 var prev = document.querySelector("#prev")
 var random = document.querySelector("#random")
 var checkText = document.querySelector(".check")
+var aaaa = document.querySelector(".aaaa")
+var socaudung = 0
 var currentIndex = 0
 var arrSavecurrentIndex = []
 btn.addEventListener("click", function () {
@@ -655,10 +657,12 @@ btn.addEventListener("click", function () {
 })
 
 next.addEventListener("click", function () {
+    CheckAnswer()
     currentIndex++
     checkText.classList.add("hide")
     if (currentIndex >= questionList.length) currentIndex = 0
     console.log(currentIndex)
+    aaaa.innerHTML = "Số lần đúng: " + socaudung
 
     Runtime()
 })
@@ -692,6 +696,7 @@ function CheckAnswer() {
         if (selectedAnswer == questionList[currentIndex].answer[questionList[currentIndex].correctAns]) {
             checkText.classList.remove("hide")
             checkText.innerHTML = "Chính xác"
+            socaudung++
         } else {
             checkText.classList.remove("hide")
             checkText.innerHTML = "Sai rồi"
