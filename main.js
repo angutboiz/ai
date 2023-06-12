@@ -748,6 +748,8 @@ var btnChonCau = document.querySelector("#btn-choncau")
 var chonCau = document.querySelector("#choncau")
 
 btnChonCau.addEventListener("click", function () {
-    currentIndex = chonCau.value - 1
-    Runtime()
+    if (chonCau.value <= questionList.length) {
+        currentIndex = chonCau.value - 1
+        Runtime()
+    } else alert("Chúng tôi chỉ có " + questionList.length + " câu hỏi, vui lòng nhập lại!")
 })
