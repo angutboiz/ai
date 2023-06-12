@@ -743,3 +743,11 @@ function Runtime() {
 }
 
 Runtime()
+
+var btnChonCau = document.querySelector("#btn-choncau")
+var chonCau = document.querySelector("#choncau")
+
+btnChonCau.addEventListener("click", function () {
+    currentIndex = chonCau.value - 1
+    Runtime()
+})

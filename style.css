@@ -141,7 +141,11 @@ form {
 }
 
 .next-prev {
-    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin: 5px 0;
 }
 
 .image {
@@ -182,4 +186,17 @@ button a {
 .aaaa {
     color: #ff9500;
     margin-right: 40px;
+}
+
+.bbb {
+    background-color: #22a699;
+}
+
+#choncau {
+    font-size: 20px;
+    width: 150px;
+    padding: 6px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
 }
