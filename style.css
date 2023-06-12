@@ -13,12 +13,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 form {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -162,4 +164,14 @@ form {
     .square {
         width: 95%;
     }
+}
+
+.a {
+    background-color: #4534db;
+}
+
+button a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
 }
